@@ -23,7 +23,7 @@
 					<div class="proposal p1">
 						<div class="ptext">
 							Сможем удивить <br /> самого требовательного <br /> гурмана
-							<?=anchor('#','Посмотреть меню &raquo;');?>
+							<?=anchor('menu','Посмотреть меню &raquo;');?>
 						</div>
 					</div>
 				</div>
@@ -46,10 +46,7 @@
 				<div class="grid_4">
 					<div class="mailing-list">
 						<h3>Подпишись на анонс событий</h3>
-						<form>
-							<input value="" type="text" placeholder="Введите email..."/>
-							<button>Быть в курсе!</button>
-						</form>
+						<?=$this->load->view("forms/frmrss");?>
 						<div class="note">
 							Будь первым кто узнает о новом событии. <br/>
 							Только одно письмо в месяц. Всегда купон на скидку. 
@@ -70,5 +67,19 @@
 	</div>
 <?=$this->load->view("users_interface/footer");?>
 <?=$this->load->view("users_interface/scripts");?>
+<?=$this->load->view("users_interface/yandex");?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#submit").click(function(event){
+			var email = $("#email").val();
+			if(!isValidEmailAddress(email)){event.preventDefault();}else{alert("Сообщение отправлено");}
+		});
+		function isValidEmailAddress(emailAddress){
+			if(emailAddress == '') return false;
+			var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
+			return pattern.test(emailAddress);
+		};
+	});
+</script>
 </body>
 </html>

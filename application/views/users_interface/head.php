@@ -7,5 +7,6 @@
 <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="<?=$baseurl;?>css/style.css">
 <link rel="stylesheet" href="<?=$baseurl;?>css/960.css">
+<link rel="stylesheet" href="<?=$baseurl;?>css/alerts.css">
 <script src="<?=$baseurl;?>js/libs/modernizr-2.5.3.min.js"></script>
 </head>

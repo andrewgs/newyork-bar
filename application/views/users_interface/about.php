@@ -122,6 +122,7 @@
 	</div>
 <?=$this->load->view("users_interface/footer");?>
 <?=$this->load->view("users_interface/scripts");?>
+<?=$this->load->view("users_interface/yandex");?>
 <script src="<?=$baseurl;?>js/jquery.cycle.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){

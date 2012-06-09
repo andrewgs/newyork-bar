@@ -154,13 +154,14 @@ header nav ul li.last a { margin-right: 0; }
 .euro-wrapper { background: url('../img/euro_bg.jpg') no-repeat; width: 960px; position: relative; border-radius: 5px 5px 0 0; }
 .euro { color: #f0f0f0; position: relative; }
 .euro-logo { position: absolute; background: url('../img/euro_logo.png'); width: 204px; height: 229px; top: 90px; right: 30px; }
+.euro-action {position: absolute; background: url('../img/euro_action.png') no-repeat; width: 300px; height: 300px; top: 5px; right: 20px;}
 .euro h1 { color: #ccc; font: bold 32px 'PT Sans',Helvetica,Arial,sans-serif; letter-spacing: 1px; margin: 25px 40px 15px 15px; text-transform: uppercase; }
 .euro h2 { margin: 10px 15px; }
-.euro .today { color: #FB911B; font: 32px 'pt sans',helvetica,arial,sans-serif; padding: 0 0 0 5px; text-shadow: 1px 1px 1px #333; }
+.euro .today { color: #FB911B; font: 32px 'pt sans',helvetica,arial,sans-serif; padding: 0 0 0 5px; text-shadow: 1px 1px 1px #333; margin: -4px 0 0; }
 .euro .team { font: bold 28px 'pt sans',helvetica,arial,sans-serif; letter-spacing: 1px; text-transform: uppercase; }
 .euro .team .country-1,
-.euro .team .country-2 { display: inline-block; width: 140px; text-align: left; }
-.euro .team .country-2 { text-align: right; }
+.euro .team .country-2 { display: inline-block; width: 170px; text-align: left; font-size: 20px; }
+.euro .team .country-2 { text-align: left; width: 110px; }
 .euro .playtime { font: 32px Consolas, "Lucida Console", "DejaVu Sans Mono", "Courier New", Courier, monospace; letter-spacing: 1px; }
 .euro .order { font: 16px 'pt sans',helvetica,arial,sans-serif; letter-spacing: 1px; margin: 15px; text-transform: uppercase; }
 .euro .order strong, .euro .order strong a { color: #FB911B; font-size: 28px; padding: 0 0 0 10px; text-shadow: 1px 1px 1px #333; }
@@ -168,6 +169,7 @@ header nav ul li.last a { margin-right: 0; }
 .euro ul { list-style: none; }
 .euro ul li { background: url("../img/star.png") no-repeat scroll 0 2px transparent; font-size: 13px; font-weight: bold; list-style: none outside none;margin: 0 !important; padding: 0 0 13px 17px; }
 .euro-table { background: url("../img/euro_table.jpg"); width: 960px; height: 436px; }
+.tables-schema { background: url("../img/tables_schema.jpg"); width: 960px; height: 436px; }
 
 /* restaurant */
 
@@ -216,11 +218,11 @@ header nav ul li.last a { margin-right: 0; }
 }
 .menu-wrapper .menu-header { padding-left: 40px; }
 .menu-chapter table { width: 100%; }
-.menu-chapter table td { color: #999; text-align: center; padding: 10px 8px 18px; font-size: 16px;}
-.menu-chapter table td.weight { width: 10%; }
-.menu-chapter table td.caption { width: 80%; font-size: 15px; }
-.menu-chapter table td.caption strong { display: inline-block; font: 23px/23px 'pt sans',helvetica,arial,sans-serif; margin: 0 0 5px; text-transform: uppercase; }
-.menu-chapter table td.price { width: 10%; }
+.menu-chapter table td { color: #999; text-align: left; padding: 8px; font-size: 16px;}
+.menu-chapter table td.weight { width: 10%; white-space: nowrap; }
+.menu-chapter table td.caption { font-size: 14px; line-height: 19px; width: 80%; }
+.menu-chapter table td.caption strong { color: #E0E0E0; display: inline-block; font: bold 18px/23px 'pt sans',helvetica,arial,sans-serif; letter-spacing: 1px; margin: 0 0 2px; text-transform: uppercase; }
+.menu-chapter table td.price { width: 10%; white-space: nowrap; }
 
 
 /* general */

@@ -12,6 +12,7 @@ class Users_interface extends CI_Controller{
 		$this->load->model('mdusers');
 		$this->load->model('mdfoodcategory');
 		$this->load->model('mdfoods');
+		$this->load->model('mdrssevents');
 		
 		$cookieuid = $this->session->userdata('logon');
 		if(isset($cookieuid) and !empty($cookieuid)):
@@ -47,6 +48,42 @@ class Users_interface extends CI_Controller{
 		);
 		$this->session->unset_userdata('msgs');
 		$this->session->unset_userdata('msgr');
+		
+		if($this->input->post('submit')):
+			$_POST['submit'] = NULL;
+			$this->form_validation->set_rules('email',' ','required|valid_email|trim');
+			if(!$this->form_validation->run()):
+				$this->session->set_userdata('msgr','Ошибка. Повторите ввод.');
+			else:
+				ob_start();
+				?>
+				<p>
+					Здравствуйте.<br/>Вы подписались на анонс событий от ресторана-бара New York.<br/>
+					<br/><br/>
+					Будь первым кто узнает о новом событии.<br/>
+					Только одно письмо в месяц. Всегда купон на скидку.<br/>
+				</p>
+				<?
+				$mailtext = ob_get_clean();
+				
+				$this->email->clear(TRUE);
+				$config['smtp_host'] = 'localhost';
+				$config['charset'] = 'utf-8';
+				$config['wordwrap'] = TRUE;
+				$config['mailtype'] = 'html';
+				
+				$this->email->initialize($config);
+				$this->email->to($_POST['email']);
+				$this->email->from('info@newyork-bar.ru','Ресторан-бар Нью-Йорк');
+				$this->email->bcc('');
+				$this->email->subject('Анонс событий от New York');
+				$this->email->message($mailtext);	
+				$this->email->send();
+				
+				$this->mdrssevents->insert_record($_POST);
+			endif;
+			redirect($this->uri->uri_string());
+		endif;
 		
 		$this->load->view("users_interface/index",$pagevar);
 	}

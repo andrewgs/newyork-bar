@@ -14,7 +14,7 @@
 				<div class="contacts clearfix">
 					<h1>Контакты</h1>
 					<div class="grid_5 suffix_1">
-						<div id="message_box"></div>
+						<div id="message_box" style="margin-left: 70px; width: 340px;"></div>
 						<?=$this->load->view("forms/frmcontact");?>
 					</div>
 					<div class="grid_6">
@@ -44,16 +44,21 @@
 	</div>
 <?=$this->load->view("users_interface/footer");?>
 <?=$this->load->view("users_interface/scripts");?>
+<?=$this->load->view("users_interface/yandex");?>
 <script src="<?=$baseurl;?>js/script.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
 		$("#submit").click(function(event){
 			var err = false;
 			var email = $("#email").val();
-			$(".inpval").each(function(i,element){if($(this).val()==''){err = true;}});
-			if(err){$("#message_box").html('<div class="error_box">Поля не могут быть пустыми</div>'); event.preventDefault();};
-			if(!err && !isValidEmailAddress(email)){$("#message_box").html('<div class="error_box">Не верный адрес E-Mail</div>'); event.preventDefault();}
+			$(".inpval").each(function(i,element){if($(this).val()==''){err = true;$(this).addClass('empty-error');}});
+			if(err){$("#message_box").html('<div class="alert alert-error">Поля не могут быть пустыми</div>'); event.preventDefault();};
+			if(!err && !isValidEmailAddress(email)){$("#message_box").html('<div class="alert alert-error">Не верный адрес E-Mail</div>'); event.preventDefault();}
 		});
+		$(".inpval").focusin(function(){
+			$(this).removeClass('empty-error');
+		});
+			
 		function isValidEmailAddress(emailAddress){
 			var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
 			return pattern.test(emailAddress);

@@ -17,6 +17,6 @@
 		<textarea rows="5" id="text" name="text" class="inpval"></textarea>
 	</div>
 	<div class="control-group">
-		<button type="submit" id="submit" name="submit">Отправить</button>
+		<button type="submit" id="submit" name="submit" value="send">Отправить</button>
 	</div>
 <?= form_close(); ?>
