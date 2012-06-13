@@ -13,21 +13,26 @@
 			<h3>Категории блюд</h3>
 			<?php $this->load->view('alert_messages/alert-error');?>
 			<?php $this->load->view('alert_messages/alert-success');?>
-			<ol>
-				<?php for($i=0;$i<count($fcategory);$i++):?>
-				<li><?=anchor('admin-panel/actions/food-category/id/'.$fcategory[$i]['id'],$fcategory[$i]['title']);?></li>
-				<?php endfor;?>
-			</ol>
+		<?php for($i=0;$i<count($fcategory);$i++):?>
+			<table class="table table-bordered">
+				<tr>
+					<td style="min-width: 15px;"><?=$i+1;?>.</td>
+					<td style="min-width: 600px;"><?=anchor('admin-panel/actions/food-category/id/'.$fcategory[$i]['id'],$fcategory[$i]['title']);?></td>
+					<td><a href="#delFoodCategory" class="delcFood" data-cfood="<?=$fcategory[$i]['id'];?>" data-toggle="modal" title="Удалить категорию блюд">Удалить</a></td>
+				</tr>
+			</table>
+		<?php endfor;?>
 			<hr/>
 			<a href="#addFoodCategory" data-toggle="modal" title="Добавить категорию блюд"><button class="btn btn-primary" type="button"> Добавить категорию </button></a>
 		</div>
 	</div>
 	<?php $this->load->view('admin_interface/modal/admin-add-food-category');?>
+	<?php $this->load->view('admin_interface/modal/admin-del-food-category');?>
 <?=$this->load->view("admin_interface/footer");?>
 <?=$this->load->view("admin_interface/scripts");?>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			
+			var cFood = -1;
 			$("#send").click(function(event){
 				var err = false;
 				$(".control-group").removeClass('error');
@@ -41,6 +46,8 @@
 				});
 				if(err){event.preventDefault();}
 			});
+			$(".delcFood").click(function(){cFood = $(this).attr('data-cfood');});
+			$("#deleteFoodCategory").click(function(){location.href='<?=$baseurl;?>admin-panel/actions/food-category/delete-category/'+cFood;});
 			$("#addFoodCategory").on("hidden",function(){$("#msgalert").remove();$(".control-group").removeClass('error');$(".help-inline").hide();$(".input-xlarge").val('');});
 		});
 	</script>

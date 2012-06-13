@@ -18,6 +18,8 @@ $route['admin-panel/logoff'] 				= "admin_interface/admin_logoff";
 $route['admin-panel/actions/control'] 		= "admin_interface/admin_panel";
 $route['admin-panel/actions/cabinet'] 		= "admin_interface/admin_cabinet";
 
-
 $route['admin-panel/actions/food-category/list'] 		= "admin_interface/food_category_list";
 $route['admin-panel/actions/food-category/id/:num'] 	= "admin_interface/food_category_info";
+
+$route['admin-panel/actions/food-category/delete-category/:num'] 		= "admin_interface/food_category_delete";
+$route['admin-panel/actions/food-category/id/:num/delete-food/:num'] 	= "admin_interface/food_delete";

@@ -26,6 +26,17 @@ class Mdfoods extends CI_Model {
 		$this->db->insert('foods',$this);
 		return $this->db->insert_id();
 	}
+
+	function update_record($data){
+			
+		$this->db->set('title',htmlspecialchars($data['title']));
+		$this->db->set('weight',htmlspecialchars($data['weight']));
+		$this->db->set('composition',$data['composition']);
+		$this->db->set('price',$data['price']);
+		$this->db->where('id',$data['idf']);
+		$this->db->update('foods');
+		return $this->db->affected_rows();
+	}
 	
 	function read_record($id){
 		
@@ -67,6 +78,13 @@ class Mdfoods extends CI_Model {
 	function delete_record($id){
 	
 		$this->db->where('id',$id);
+		$this->db->delete('foods');
+		return $this->db->affected_rows();
+	}	
+	
+	function delete_records($category){
+	
+		$this->db->where('category',$category);
 		$this->db->delete('foods');
 		return $this->db->affected_rows();
 	}	

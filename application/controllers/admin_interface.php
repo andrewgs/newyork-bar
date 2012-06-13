@@ -140,9 +140,52 @@ class Admin_interface extends CI_Controller{
 			redirect($this->uri->uri_string());
 		endif;
 		
+		if($this->input->post('asubmit')):
+			$_POST['asubmit'] = NULL;
+			$this->form_validation->set_rules('idf',' ','required|trim');
+			$this->form_validation->set_rules('title',' ','required|trim');
+			$this->form_validation->set_rules('weight',' ','required|trim');
+			$this->form_validation->set_rules('price',' ','required|trim');
+			$this->form_validation->set_rules('composition',' ','trim');
+			if(!$this->form_validation->run()):
+				$this->session->set_userdata('msgr','Ошибка при сохранении. Не заполены необходимые поля.');
+			else:
+				$result = $this->mdfoods->update_record($_POST);
+				if($result):
+					$this->session->set_userdata('msgs','Блюдо сохранено успешно.');
+				endif;
+			endif;
+			redirect($this->uri->uri_string());
+		endif;
+		
 		$this->load->view("admin_interface/admin-food-category-info",$pagevar);
 	}
-
+	
+	public function food_category_delete(){
+		
+		$cFood = $this->uri->segment(5);
+		$result = $this->mdfoodcategory->delete_record($cFood);
+		if($result):
+			$this->mdfoods->delete_records($cFood);
+			$this->session->set_userdata('msgs','Категория удалено успешно.');
+		else:
+			$this->session->set_userdata('msgr','Категория не удалено.');
+		endif;
+		redirect('admin-panel/actions/food-category/list');
+	}
+	
+	public function food_delete(){
+		
+		$Food = $this->uri->segment(7);
+		$result = $this->mdfoods->delete_record($Food);
+		if($result):
+			$this->session->set_userdata('msgs','Блюдо удалено успешно.');
+		else:
+			$this->session->set_userdata('msgr','Блюдо не удалено.');
+		endif;
+		redirect('admin-panel/actions/food-category/id/'.$this->uri->segment(5));
+	}
+	
 	/******************************************************** functions ******************************************************/	
 	
 	public function fileupload($userfile,$overwrite,$catalog){
