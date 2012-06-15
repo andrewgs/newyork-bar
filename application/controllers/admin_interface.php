@@ -202,15 +202,32 @@ class Admin_interface extends CI_Controller{
 			);
 		$this->session->unset_userdata('msgs');
 		$this->session->unset_userdata('msgr');
-		
+		$textid = FALSE;
 		switch ($this->uri->segment(4)):
 			case 'menu' : 	$pagevar['textblock'] = $this->mdtextblock->read_field(1,'textblock'); 
-							$pagevar['tblocktitle'] = 'Редактирование текстового блока "Меню"'; 
+							$pagevar['tblocktitle'] = 'Редактирование текстового блока "Меню"';
+							$textid = 1; 
 							break;
 			case 'about' : 	$pagevar['textblock'] = $this->mdtextblock->read_field(2,'textblock'); 
-							$pagevar['tblocktitle'] = 'Редактирование текстового блока "О ресторане"'; 
+							$pagevar['tblocktitle'] = 'Редактирование текстового блока "О ресторане"';
+							$textid = 2;
+							break;
+				default :	show_404();
 							break;
 		endswitch;
+		
+		if($this->input->post('submit')):
+			$_POST['submit'] = NULL;
+			$this->form_validation->set_rules('textblock',' ','trim');
+			if(!$this->form_validation->run()):
+			else:
+				$result = $this->mdtextblock->update_record($textid,$_POST);
+				if($result):
+					$this->session->set_userdata('msgs','Текст сохранен.');
+				endif;
+			endif;
+			redirect($this->uri->uri_string());
+		endif;
 		
 		$this->load->view("admin_interface/admin-text-block",$pagevar);
 	}

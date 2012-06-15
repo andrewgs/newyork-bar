@@ -10,6 +10,8 @@
 	<div role="main">
 		<div class="container_12">
 			<div><?=anchor('admin-panel/actions/control','Вернутся назад');?></div>
+			<?php $this->load->view('alert_messages/alert-error');?>
+			<?php $this->load->view('alert_messages/alert-success');?>
 			<div class=""><?=$tblocktitle;?></div>
 			<div>
 				<?=$this->load->view("forms/frmedittextblock");?>
@@ -21,7 +23,8 @@
 <script type="text/javascript" src="<?=$baseurl;?>js/redactor/redactor.js"></script>
 <script type="text/javascript">
 	$(document).ready(function(){
-		$('#text').redactor({toolbar:'main',lang: 'ru',css:['wym.css']});
+		$('#text').redactor({toolbar:'default',lang: 'ru',css:['wym.css'],'fixed': true});
+		$('#text').redactor({ autoresize: true });
 	});
 </script>
 </body>
