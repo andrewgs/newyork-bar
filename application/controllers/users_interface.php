@@ -13,6 +13,7 @@ class Users_interface extends CI_Controller{
 		$this->load->model('mdfoodcategory');
 		$this->load->model('mdfoods');
 		$this->load->model('mdrssevents');
+		$this->load->model('mdtextblock');
 		
 		$cookieuid = $this->session->userdata('logon');
 		if(isset($cookieuid) and !empty($cookieuid)):
@@ -97,6 +98,7 @@ class Users_interface extends CI_Controller{
 			'baseurl' 		=> base_url(),
 			'loginstatus'	=> $this->loginstatus,
 			'userinfo'		=> $this->user,
+			'textblock'		=> $this->mdtextblock->read_field(2,'textblock'),
 			'msgs'			=> $this->session->userdata('msgs'),
 			'msgr'			=> $this->session->userdata('msgr'),
 		);
@@ -117,6 +119,7 @@ class Users_interface extends CI_Controller{
 			'userinfo'		=> $this->user,
 			'fcategory'		=> $this->mdfoodcategory->read_records(),
 			'foods'			=> $this->mdfoods->read_all_records(),
+			'textblock'		=> $this->mdtextblock->read_field(1,'textblock'),
 			'msgs'			=> $this->session->userdata('msgs'),
 			'msgr'			=> $this->session->userdata('msgr'),
 		);

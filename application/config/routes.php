@@ -23,3 +23,6 @@ $route['admin-panel/actions/food-category/id/:num'] 	= "admin_interface/food_cat
 
 $route['admin-panel/actions/food-category/delete-category/:num'] 		= "admin_interface/food_category_delete";
 $route['admin-panel/actions/food-category/id/:num/delete-food/:num'] 	= "admin_interface/food_delete";
+
+$route['admin-panel/actions/text-block/menu'] 	= "admin_interface/edit_text_block";
+$route['admin-panel/actions/text-block/about'] 	= "admin_interface/edit_text_block";

@@ -8,5 +8,6 @@
 <link rel="stylesheet" href="<?=$baseurl;?>css/style.css">
 <link rel="stylesheet" href="<?=$baseurl;?>css/960.css">
 <link rel="stylesheet" href="<?=$baseurl;?>css/bootstrap.min.css" >
+<link rel="stylesheet" href="<?=$baseurl;?>js/redactor/css/redactor.css" />
 <script src="<?=$baseurl;?>js/libs/modernizr-2.5.3.min.js"></script>
 </head>

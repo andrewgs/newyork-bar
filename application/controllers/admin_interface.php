@@ -12,6 +12,7 @@ class Admin_interface extends CI_Controller{
 		$this->load->model('mdusers');
 		$this->load->model('mdfoodcategory');
 		$this->load->model('mdfoods');
+		$this->load->model('mdtextblock');
 		
 		$cookieuid = $this->session->userdata('logon');
 		if(isset($cookieuid) and !empty($cookieuid)):
@@ -184,6 +185,34 @@ class Admin_interface extends CI_Controller{
 			$this->session->set_userdata('msgr','Блюдо не удалено.');
 		endif;
 		redirect('admin-panel/actions/food-category/id/'.$this->uri->segment(5));
+	}
+	
+	public function edit_text_block(){
+		
+		$pagevar = array(
+					'description'	=> '',
+					'author'		=> '',
+					'title'			=> 'Панель администрирования',
+					'baseurl' 		=> base_url(),
+					'userinfo'		=> $this->user,
+					'textblock'		=> '',
+					'tblocktitle'	=> '',
+					'msgs'			=> $this->session->userdata('msgs'),
+					'msgr'			=> $this->session->userdata('msgr')
+			);
+		$this->session->unset_userdata('msgs');
+		$this->session->unset_userdata('msgr');
+		
+		switch ($this->uri->segment(4)):
+			case 'menu' : 	$pagevar['textblock'] = $this->mdtextblock->read_field(1,'textblock'); 
+							$pagevar['tblocktitle'] = 'Редактирование текстового блока "Меню"'; 
+							break;
+			case 'about' : 	$pagevar['textblock'] = $this->mdtextblock->read_field(2,'textblock'); 
+							$pagevar['tblocktitle'] = 'Редактирование текстового блока "О ресторане"'; 
+							break;
+		endswitch;
+		
+		$this->load->view("admin_interface/admin-text-block",$pagevar);
 	}
 	
 	/******************************************************** functions ******************************************************/	

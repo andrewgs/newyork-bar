@@ -9,14 +9,20 @@
 <?=$this->load->view("admin_interface/header");?>
 	<div role="main">
 		<div class="container_12">
-			<ul>
-				<li><?=anchor('admin-panel/actions/food-category/list','Категории блюд');?></li>
-				<li><?=anchor('admin-panel/actions/text-block/menu','Текстовый блок "Меню"');?></li>
-				<li><?=anchor('admin-panel/actions/text-block/about','Текстовый блок "О ресторане"');?></li>
-			</ul>
+			<div><?=anchor('admin-panel/actions/control','Вернутся назад');?></div>
+			<div class=""><?=$tblocktitle;?></div>
+			<div>
+				<?=$this->load->view("forms/frmedittextblock");?>
+			</div>
 		</div>
 	</div>
 <?=$this->load->view("admin_interface/footer");?>
 <?=$this->load->view("admin_interface/scripts");?>
+<script type="text/javascript" src="<?=$baseurl;?>js/redactor/redactor.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#text').redactor({toolbar:'main',lang: 'ru',css:['wym.css']});
+	});
+</script>
 </body>
 </html>
