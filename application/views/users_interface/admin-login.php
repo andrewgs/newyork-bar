@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<?php $this->load->view('users_interface/head');?>
+<?php $this->load->view('users_interface/includes/head');?>
 <body>
 	<div class="container">
 		<div class="row">
@@ -9,7 +9,7 @@
 			</div>
 		</div>
 	</div>
-	<?php $this->load->view('users_interface/scripts');?>
+	<?php $this->load->view('users_interface/includes/scripts');?>
 	<script type="text/javascript">
 		$(document).ready(function(){
 			$("#send").click(function(event){

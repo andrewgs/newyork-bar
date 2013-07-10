@@ -14,6 +14,13 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label for="subcategory" class="control-label">Подкатегория: </label>
+				<div class="controls">
+					<input type="text" id="asubcategory" class="input-xlarge ainput" name="subcategory">
+					<span class="help-inline" style="display:none;">&nbsp;</span>
+				</div>
+			</div>
+			<div class="control-group">
 				<label for="weight" class="control-label">Вес: </label>
 				<div class="controls">
 					<input type="text" id="aweight" class="input-xlarge ainput" name="weight">

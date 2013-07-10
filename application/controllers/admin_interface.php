@@ -69,7 +69,7 @@ class Admin_interface extends CI_Controller{
 	public function admin_logoff(){
 		
 		$this->session->sess_destroy();
-        redirect('');
+		redirect('');
 	}
 
 	public function food_category_list(){
@@ -90,6 +90,7 @@ class Admin_interface extends CI_Controller{
 		if($this->input->post('submit')):
 			$_POST['submit'] = NULL;
 			$this->form_validation->set_rules('title',' ','required|trim');
+			$this->form_validation->set_rules('uri',' ','required|trim');
 			if(!$this->form_validation->run()):
 				$this->session->set_userdata('msgr','Ошибка при сохранении. Не заполены необходимые поля.');
 			else:
@@ -127,6 +128,7 @@ class Admin_interface extends CI_Controller{
 		if($this->input->post('submit')):
 			$_POST['submit'] = NULL;
 			$this->form_validation->set_rules('title',' ','required|trim');
+			$this->form_validation->set_rules('subcategory',' ','required|trim');
 			$this->form_validation->set_rules('weight',' ','required|trim');
 			$this->form_validation->set_rules('price',' ','required|trim');
 			$this->form_validation->set_rules('composition',' ','trim');
@@ -145,8 +147,9 @@ class Admin_interface extends CI_Controller{
 			$_POST['asubmit'] = NULL;
 			$this->form_validation->set_rules('idf',' ','required|trim');
 			$this->form_validation->set_rules('title',' ','required|trim');
-			$this->form_validation->set_rules('weight',' ','required|trim');
-			$this->form_validation->set_rules('price',' ','required|trim');
+			$this->form_validation->set_rules('subcategory',' ','trim');
+			$this->form_validation->set_rules('weight',' ','trim');
+			$this->form_validation->set_rules('price',' ','trim');
 			$this->form_validation->set_rules('composition',' ','trim');
 			if(!$this->form_validation->run()):
 				$this->session->set_userdata('msgr','Ошибка при сохранении. Не заполены необходимые поля.');

@@ -15,6 +15,13 @@
 				</div>
 			</div>
 			<div class="control-group">
+				<label for="subcategory" class="control-label">Подкатегория: </label>
+				<div class="controls">
+					<input type="text" id="esubcategory" class="input-xlarge einput" name="subcategory">
+					<span class="help-inline" style="display:none;">&nbsp;</span>
+				</div>
+			</div>
+			<div class="control-group">
 				<label for="weight" class="control-label">Вес: </label>
 				<div class="controls">
 					<input type="text" id="eweight" class="input-xlarge einput" name="weight" value="">
@@ -39,7 +46,7 @@
 	</div>
 	<div class="modal-footer">
 		<button class="btn" data-dismiss="modal">Отменить</button>
-		<button class="btn btn-success" type="submit" id="asend" name="asubmit" value="send">Добавить</button>
+		<button class="btn btn-success" type="submit" id="asend" name="asubmit" value="send">Сохранить</button>
 	</div>
 <?= form_close(); ?>
 </div>

@@ -13,12 +13,15 @@
 			<h3>Список блюд (<?=$cname;?>)</h3>
 			<?php $this->load->view('alert_messages/alert-error');?>
 			<?php $this->load->view('alert_messages/alert-success');?>
+			<hr/>
+			<a href="#addFood" data-toggle="modal" title="Добавить блюдо"><button class="btn btn-primary" type="button"> Добавить блюдо </button></a>
+			<hr/>
 		<?php for($i=0;$i<count($foods);$i++):?>	
 			<table class="table table-bordered">
 				<tr>
 					<td style="min-width: 15px;"><?=$i+1;?>.</td>
 					<td style="min-width: 600px;"><?=anchor('',$foods[$i]['title'],array('class'=>'none'));?></td>
-					<td><a href="#editFood" class="editFood" data-ifood="<?=$foods[$i]['id'];?>" data-tfood="<?=$foods[$i]['title'];?>" data-wfood="<?=$foods[$i]['weight'];?>" data-cpfood="<?=$foods[$i]['composition'];?>" data-pfood="<?=$foods[$i]['price'];?>" data-toggle="modal" title="Редактировать блюдо">Редактировать</a></td>
+					<td><a href="#editFood" class="editFood" data-ifood="<?=$foods[$i]['id'];?>" data-tfood="<?=$foods[$i]['title'];?>" data-tsubcategory="<?=$foods[$i]['subcategory'];?>" data-wfood="<?=$foods[$i]['weight'];?>" data-cpfood="<?=$foods[$i]['composition'];?>" data-pfood="<?=$foods[$i]['price'];?>" data-toggle="modal" title="Редактировать блюдо">Редактировать</a></td>
 					<td><a href="#delFood" class="delFood" data-food="<?=$foods[$i]['id'];?>" data-toggle="modal" title="Удалить блюдо">Удалить</a></td>
 				</tr>
 			</table>
@@ -53,6 +56,7 @@
 				Food = $(this).attr('data-ifood');
 				$("#idFood").val(Food);
 				$("#etitle").val($(this).attr("data-tfood"));
+				$("#esubcategory").val($(this).attr("data-tsubcategory"));
 				$("#eweight").val($(this).attr("data-wfood"));
 				$("#ecomposition").html($(this).attr("data-cpfood"));
 				$("#eprice").val($(this).attr("data-pfood"));

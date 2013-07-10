@@ -13,6 +13,13 @@
 					<span class="help-inline" style="display:none;">&nbsp;</span>
 				</div>
 			</div>
+			<div class="control-group">
+				<label for="uri" class="control-label">URL категории: </label>
+				<div class="controls">
+					<input type="text" id="auri" class="input-xlarge ainput" name="uri">
+					<span class="help-inline" style="display:none;">&nbsp;</span>
+				</div>
+			</div>
 		</fieldset>
 	</div>
 	<div class="modal-footer">

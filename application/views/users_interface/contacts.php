@@ -1,52 +1,61 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<?=$this->load->view("users_interface/head");?>
+<!DOCTYPE html>
+<!-- /ht Paul Irish - http://front.ie/j5OMXi -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<?=$this->load->view("users_interface/includes/head");?>
+
 <body>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<?=$this->load->view("users_interface/header");?>
-	<div role="main">
-		<div class="container_12">
-			<div class="contacts-wrapper">
-				<div class="mainslide-frame"> </div>
-				<div class="contacts clearfix">
-					<h1>Контакты</h1>
-					<div class="grid_5 suffix_1">
-						<div id="message_box" style="margin-left: 70px; width: 340px;"></div>
+	<div class="top-shadow"> </div>
+	<div id="container" class="cf">
+		<?=$this->load->view("users_interface/includes/header");?>
+	
+		<div id="main" role="main">
+			<?=$this->load->view("users_interface/includes/navigation");?>
+			
+			<div class="ya-map cf">
+				<div id="ymaps-map-id_133876530959542054863"></div>
+				<script type="text/javascript">
+					function fid_133876530959542054863(ymaps) {var map = new ymaps.Map("ymaps-map-id_133876530959542054863", {center : [39.774624076721146, 47.23498908113597],zoom : 15,type : "yandex#map"});
+						map.controls.add("zoomControl").add("mapTools").add(new ymaps.control.TypeSelector(["yandex#map", "yandex#satellite", "yandex#hybrid", "yandex#publicMap"]));
+						map.geoObjects.add(new ymaps.Placemark([39.774409, 47.235179], {balloonContent : "Ресторан-бар Нью-Йорк"},{preset : "twirl#redDotIcon"}));
+					};
+				</script>
+				<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?coordorder=longlat&load=package.full&wizard=constructor&lang=ru-RU&onload=fid_133876530959542054863"></script>
+			</div>
+			
+			<article class="cf">
+				<section>
+					<div class="column left-contacts">
+						<h3>Звоните</h3>
+						<p class="red-phone">
+			    			(863) 300-07-31 
+			    		</p>
+						<h3>Пишите</h3>
+						<p class="red-email">
+			    			<a href="mailto:info@newyork-bar.ru">info@newyork-bar.ru</a> 
+			    		</p>
+						<h3>Приходите</h3>
+						<p>
+			    			Ростов-на-Дону, <br /> 
+			    			40-я линия, 5/64 
+			    		</p>
+					</div>
+					<div class="column right-contacts">
+						<h3>Обратная связь</h3>
+						<div id="message_box"></div>
 						<?=$this->load->view("forms/frmcontact");?>
 					</div>
-					<div class="grid_6">
-						<div class="ya-map">
-							<div id="ymaps-map-id_133876530959542054863" style="width: 400px; height: 311px;"></div>
-							<script type="text/javascript">
-								function fid_133876530959542054863(ymaps) {var map = new ymaps.Map("ymaps-map-id_133876530959542054863", {center : [39.774624076721146, 47.23498908113597],zoom : 15,type : "yandex#map"});
-									map.controls.add("zoomControl").add("mapTools").add(new ymaps.control.TypeSelector(["yandex#map", "yandex#satellite", "yandex#hybrid", "yandex#publicMap"]));
-									map.geoObjects.add(new ymaps.Placemark([39.774409, 47.235179], {balloonContent : "Ресторан-бар Нью-Йорк"},{preset : "twirl#redDotIcon"}));
-								};
-							</script>
-							<script type="text/javascript" src="http://api-maps.yandex.ru/2.0/?coordorder=longlat&load=package.full&wizard=constructor&lang=ru-RU&onload=fid_133876530959542054863"></script>
-						</div>
-						<h2>РЕСТОРАН-БАР «НЬЮ-ЙОРК»</h2>
-						<p class="caption">Телефон:</p>
-						<p>(863) 300-07-31</p>
-						<p class="caption">Адрес:</p>
-						<p>Ростов-на-Дону, ул.40-линия, д.5, корп.64</p>
-						<p class="caption">Email:</p>
-						<p><?=mailto('info@newyork-bar.ru','info@newyork-bar.ru');?></p>
-						<p class="caption">Часы работы:</p>
-						<p>ПН.&ndash;ВС. 11.00 &ndash; 0.00</p>
-					</div>
-				</div>
-			</div>
+				</section>
+    	</article>			
+
 		</div>
+		<?=$this->load->view("users_interface/includes/footer");?>
 	</div>
-<?=$this->load->view("users_interface/footer");?>
-<?=$this->load->view("users_interface/scripts");?>
-<?=$this->load->view("users_interface/yandex");?>
-<script src="<?=$baseurl;?>js/script.js"></script>
-<script type="text/javascript">
+	<div class="bottom-shadow"></div>
+	<?=$this->load->view("users_interface/includes/scripts");?>
+	<script type="text/javascript">
 	$(document).ready(function(){
 		$("#submit").click(function(event){
 			var err = false;

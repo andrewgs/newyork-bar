@@ -1,18 +1,19 @@
 <?php if(!defined('BASEPATH')) exit('No direct script access allowed');
 
-class Mdfoods extends CI_Model {
+class Mdfoods extends CI_Model{
 
-    var $id   			= 0;
-    var $title 			= '';
-    var $weight  		= '';
-    var $composition 	= '';
-    var $price  		= 0;
-    var $date 			= '';
-    var $category 		= 0;
-
-    function __construct(){
-        parent::__construct();
-    }
+	var $id   			= 0;
+	var $title 			= '';
+	var $weight  		= '';
+	var $composition 	= '';
+	var $price  		= 0;
+	var $date 			= '';
+	var $category 		= 0;
+	var $subcategory 	= 0;
+	
+	function __construct(){
+		parent::__construct();
+	}
 	
 	function insert_record($data,$category){
 			
@@ -22,6 +23,7 @@ class Mdfoods extends CI_Model {
 		$this->price		= $data['price'];
 		$this->date			= date("Y-m-d");
 		$this->category		= $category;
+		$this->subcategory	= $data['subcategory'];
 		
 		$this->db->insert('foods',$this);
 		return $this->db->insert_id();
@@ -33,6 +35,7 @@ class Mdfoods extends CI_Model {
 		$this->db->set('weight',htmlspecialchars($data['weight']));
 		$this->db->set('composition',$data['composition']);
 		$this->db->set('price',$data['price']);
+		$this->db->set('subcategory',$data['subcategory']);
 		$this->db->where('id',$data['idf']);
 		$this->db->update('foods');
 		return $this->db->affected_rows();

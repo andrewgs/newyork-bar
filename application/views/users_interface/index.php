@@ -1,85 +1,143 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-<?=$this->load->view("users_interface/head");?>
+<!DOCTYPE html>
+<!-- /ht Paul Irish - http://front.ie/j5OMXi -->
+<!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<?=$this->load->view("users_interface/includes/head");?>
+
 <body>
-<!--[if lt IE 7]><p class=chromeframe>Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
-<?=$this->load->view("users_interface/header");?>
-	<div role="main">
-		<div class="container_12">
-			<div class="main-wrapper">
-				<div id="main-slide">
-					<div class="mainslide-frame"> </div>
-					<div class="welcome">
-						<div class="w1">Добро пожаловать.</div>
-						<div class="w2">Свадьбы. Банкеты. Корпоративы.</div>
+	<div class="top-shadow"> </div>
+	<div id="container" class="cf">
+		<?=$this->load->view("users_interface/includes/header");?>
+	
+		<div id="main" role="main">
+			<?=$this->load->view("users_interface/includes/navigation");?>
+			
+			<div id="carousel" class="cf" style="margin-bottom: 0;">
+				<div class="photo-wrapper clear">
+					<!--
+					<a class="promo-banner" href="<?=$baseurl;?>afisha">
+						<img src="<?=$baseurl;?>images/avakova.jpg" alt="Выступление группы Music for the soul" />
+					</a>
+					<a class="promo-banner" href="<?=$baseurl;?>menu/kalyan">
+						<img src="<?=$baseurl;?>images/kalyan.jpg" alt="Обновленное кальянное меню" />
+					</a>
+					<iframe src="http://player.vimeo.com/video/43527522?title=0&amp;byline=0&amp;autoplay=0" width="896" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+					<div class="event-title">
+						<p>15 декабря @ 20:00</p>
+						<p>Выступление группы The Hobots</p>
 					</div>
+					<a class="promo-banner" href="<?=$baseurl;?>afisha">
+						<img src="<?=$baseurl;?>images/afisha/doza_radosti.jpg" alt="Выступление группы Доза радости" />
+					</a>
+					-->
+					
+					<a class="promo-banner" href="<?=$baseurl;?>menu">
+						<img src="<?=$baseurl;?>images/baner_besplatno.jpg" alt="Свой алкоголь при заказе банкета" style="width: 900px;">
+					</a>
+
+					<!--
+					<div id="photo-thumbs"></div>
+					<div id="photo-slider">
+						<img src="<?=$baseurl;?>images/slide_1.jpg" alt="вид" alt="image" />
+						<img src="<?=$baseurl;?>images/slide_2.jpg" alt="вид" alt="image" />
+						<img src="<?=$baseurl;?>images/slide_4.jpg" alt="вид" alt="image" />
+						<img src="<?=$baseurl;?>images/slide_5.jpg" alt="вид" alt="image" />
+						<img src="<?=$baseurl;?>images/slide_6.jpg" alt="вид" alt="image" />
+					</div>
+					-->
 				</div>
 			</div>
-			<div class="proposals">
-				<div class="grid_4">
-					<div class="proposal p1">
-						<div class="ptext">
-							Сможем удивить <br /> самого требовательного <br /> гурмана
-							<?=anchor('menu','Посмотреть меню &raquo;');?>
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="proposal p2">
-						<div class="ptext">
-							Окунитесь в атмосферу <br /> Нью-Йорка в дружной <br /> компании
-							<?=anchor('#','Заказать столик &raquo;');?>
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="proposal p3">
-						<div class="ptext">
-							Мечтаете отметить<br /> корпоратив в Нью-Йорке
-							<?=anchor('#','Забронируйте день вашего праздника &raquo;');?>
-						</div>
-					</div>
-				</div>
-				<div class="grid_4">
-					<div class="mailing-list">
-						<h3>Подпишись на анонс событий</h3>
-						<?=$this->load->view("forms/frmrss");?>
-						<div class="note">
-							Будь первым кто узнает о новом событии. <br/>
-							Только одно письмо в месяц. Всегда купон на скидку. 
-						</div>
-					</div>
-				</div>
-				<div class="grid_8">
-					<div class="recomendations">
-						<h3>Согрейся нашим теплом!</h3>
+			<article class="cf">
+				<header>
+					<h1>О ресторане</h1>
+				</header>
+				<section class="paper-columns">
+					<div class="column">
 						<p>
-							Похолодало?! А в ресторан-баре New York все так же уютно и тепло. Приходи и обогрейся. <br />
-							Пока вы сидите на работе или дома или еще где-нибудь, наш замечательный шеф-повар готовит для вас удивительные блюда.
+							Как, вы еще не были в «Нью-Йорке»? Тогда вам срочно надо исправлять реноме знатока 
+							самых знаковых мест Ростова-на-Дону. А можно ничего не исправлять, а просто приехать 
+							в наш бар-ресторан вкусно поесть и отлично провести время.
+						</p>
+						<p>
+							По атмосфере гостеприимства и радушия, по чистоте и уюту Вы сразу почувствуете, что 
+							здесь Вас ждали, Вам рады, как самому дорогому гостю. Вас приятно удивит соотношение 
+							цены и качества в нашем заведении, а вкус фирменных блюд не оставит равнодушными даже 
+							изысканных гурманов. Самые лучшие впечатления на наших гостей производит работа обслуживающего 
+							персонала, все их заказы и просьбы выполняются быстро, четко и деликатно. Само название 
+							ресторана - «Нью-Йорк» ко многому обязывает, и мы стараемся ему соответствовать.
+						</p>
+						<p>
+							Как город Нью-Йорк стал плавильным котлом, в котором перемешаны все народы Земли, так и наше заведение  
 						</p>
 					</div>
-				</div>
-			</div>
+					<div class="column">
+						<p>
+							привержено стилю фьюжн и вобрало в себя культуру и традиции многих национальных
+							кухонь – армянской, грузинской, европейской, средиземноморской и, конечно же, русской. К 
+							широкому выбору блюд из меню этих кухонь, наш шеф-повар всегда предлагает что-то свое – 
+							особенное. Готов он выполнить и Ваши пожелания, будь то нечто изысканное или просто любимое Вами. 
+							Прекрасная винная карта, а так же коктейли на любой вкус дополняют красоту и богатство стола.
+						</p>
+						<p>
+							Особой популярностью наш ресторан пользуется в период больших спортивных состязаний, так как 
+							болельщикам у нас комфортно и они зажигают по полной.
+						</p>
+						<p>
+							Ваш досуг украсит и разнообразит живая музыка и неповторимая атмосфера заведения. В баре Вам 
+							предложат пиво, коктейли и вина, чай и кофе, прохладительные напитки.
+						</p>
+					</div>
+				</section>
+				<aside>
+					<img src="<?=$baseurl;?>images/main_promo_1.jpg" alt="Услуги по организации банкетов" /> 
+					<p class="image-caption">Ресторан-бар «Нью-Йорк» предлагает услуги по организации банкетов, фуршетов, свадеб, корпоративных вечеров и юбилеев.</p> 
+				</aside>
+			</article>
+			<article class="cf">
+				<header>
+					<h2>Комфорт и удобство</h2>
+				</header>
+				<section class="paper-columns narrow">
+					<div class="column wide">
+						<p>Проектор высокого разрешения и большой экран, а так же шесть плоских плазменных панелей расположены в ресторане таким образом, чтобы обеспечить вам прекрасную видимость из любого места в ресторане. Сидите, где хотите. Смотрите, что хотите.</p>
+						<h3>Всегда на связи</h3>
+						<p>Две зоны Wi-Fi позволят вам оставаться на связи в любой точке нашего ресторана.</p>
+					</div>
+				</section>
+				<aside class="wide">
+					<img src="<?=$baseurl;?>images/main_promo_2.jpg" alt="Интерьер ресторана Нью-Йорк" /> 
+				</aside>
+			</article>
+			<div class="map"> </div>
+			<div class="welcome">Welcome to New York</div>
 		</div>
+		<?=$this->load->view("users_interface/includes/footer");?>
 	</div>
-<?=$this->load->view("users_interface/footer");?>
-<?=$this->load->view("users_interface/scripts");?>
-<?=$this->load->view("users_interface/yandex");?>
-<script type="text/javascript">
-	$(document).ready(function(){
-		$("#submit").click(function(event){
-			var email = $("#email").val();
-			if(!isValidEmailAddress(email)){event.preventDefault();}else{alert("Сообщение отправлено");}
+	<div class="bottom-shadow"></div>
+	<?=$this->load->view("users_interface/includes/scripts");?>
+	<script src="<?=$baseurl;?>js/libs/jquery.cycle.js"></script>
+	<script src="<?=$baseurl;?>js/libs/jquery.easing.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			/*
+			$('div#photo-slider').cycle({
+				fx: 'scrollLeft',
+				speed: 'fast',
+				timeout: 5000,
+				pager: "#photo-thumbs", 
+				pagerAnchorBuilder: function(idx, slide){
+					return '<a class="thumbnail" href="#" style="background: url(\''+slide.src+'\') no-repeat center center;">Slide '+idx+'</a>';
+				} 
+			});
+			*/
+			$('div.photo-wrapper').cycle({
+				fx: 'fade',
+				//speed: 'slow',
+				timeout: 7000
+			});
 		});
-		function isValidEmailAddress(emailAddress){
-			if(emailAddress == '') return false;
-			var pattern = new RegExp(/^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i);
-			return pattern.test(emailAddress);
-		};
-	});
-</script>
+	</script>
 </body>
 </html>
