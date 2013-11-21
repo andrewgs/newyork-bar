@@ -54,13 +54,13 @@
 				</div>
 	<?php foreach($foods AS $category => $subcategories):?>
 				<?php if($category != 'пусто'):?>
-				<div style="color:#ff0000" class="">
+				<div class="cat1">
 					<?=$category;?>
 				</div>
 				<?php endif;?>
 		<?php foreach($subcategories AS $subcategory => $food):?>
 				<?php if($subcategory != 'пусто'):?>
-				<div style="color:#140d9f" class="">
+				<div class="cat2">
 					<?=$subcategory;?>
 				</div>
 				<?php endif;?>
