@@ -10,8 +10,8 @@
 		<li><?=anchor('contacts','Контактная информация');?></li>
 		</ul>
 	</nav>
-	<div class="copy">Ресторан-бар Нью-Йорк &copy; 2012</div>
+	<div class="copy">Ресторан-бар Нью-Йорк &copy; 2012-2013</div>
 	<div class="reality">
-		Разработка сайта &ndash; «<a href="http://grapheme.ru">Grapheme</a>»
+		Разработка сайта &ndash; «<a href="http://grapheme.ru">Графема</a>»
 	</div>
 </footer>

@@ -88,6 +88,24 @@ class Users_interface extends CI_Controller{
 		
 		$this->load->view("users_interface/index",$pagevar);
 	}
+
+	public function en(){
+		
+		$pagevar = array(
+			'title'			=> 'New York Restaurant & Bar 40 line',
+			'description'	=> 'Restaurant-bar New York offers services in organizing banquets, receptions, weddings, corporate parties and anniversaries.',
+			'author'		=> '',
+			'baseurl' 		=> base_url(),
+			'loginstatus'	=> $this->loginstatus,
+			'userinfo'		=> $this->user,
+			'msgs'			=> $this->session->userdata('msgs'),
+			'msgr'			=> $this->session->userdata('msgr'),
+		);
+		$this->session->unset_userdata('msgs');
+		$this->session->unset_userdata('msgr');
+		
+		$this->load->view("users_interface/en",$pagevar);
+	}
 	
 	public function about(){
 		
@@ -124,14 +142,31 @@ class Users_interface extends CI_Controller{
 			'loginstatus'	=> $this->loginstatus,
 			'userinfo'		=> $this->user,
 			'fcategory'		=> $this->mdfoodcategory->read_records(),
-			'foods'			=> $this->mdfoods->read_records($ct['id']),
+			'foods'			=> array(),
 			'ctgtitle'		=> $ct['title'],
 			'textblock'		=> $this->mdtextblock->read_field(1,'textblock'),
-			'msgs'			=> $this->session->userdata('msgs'),
-			'msgr'			=> $this->session->userdata('msgr'),
 		);
-		$this->session->unset_userdata('msgs');
-		$this->session->unset_userdata('msgr');
+		
+		if($foods = $this->mdfoods->read_records($ct['id'],'subcategory ASC,title ASC')):
+			$food_category1 = array();
+			$food_category2 = array();
+			foreach($foods as $food_key => $food_value):
+				if(empty($food_value['subcategory'])):
+					$food_value['subcategory'] = 'пусто';
+				endif;
+				$food_category1[$food_value['subcategory']][] = $food_value;
+			endforeach;
+			foreach($food_category1 as $food_key => $food_value):
+				foreach($food_value as $food_category_key => $food_category_value):
+					if(empty($food_category_value['subcategory1'])):
+						$food_category_value['subcategory1'] = 'пусто';
+					endif;
+					$food_category2[$food_key][$food_category_value['subcategory1']][] = $food_category_value;
+				endforeach;
+			endforeach;
+			$pagevar['foods'] = $food_category2;
+		endif;
+		
 		
 		$this->load->view("users_interface/menu",$pagevar);
 	}
@@ -175,8 +210,8 @@ class Users_interface extends CI_Controller{
 	public function banketi_svadbi(){
 		
 		$pagevar = array(
-			'title'			=> 'Ресторан-бар Нью-Йорк :: Кафе для проведения свадеб и банкетов в Ростове-на-Дону',
-			'description'	=> 'Ресторан-бар New York с удовольствием организует вашу свадьбу. В вашем распоряжении большой просторный зал на 80 человек с отдельной VIP зоной.',
+			'title'			=> 'Банкетный зал для свадьбы | Свадебный банкет | Ресторан для свадьбы Ростов | Где отметить свадьбу | Свадебный банкет',
+			'description'	=> 'Ресторан-бар Нью Йорк специализируется на проведении свадебных торжеств в Ростове-на-Дону. Банкетный зал для свадьбы на 80 персон. Если вы ищете, где отметить свадьбу, звоните, вы сделаете правильный выбор!',
 			'author'		=> '',
 			'baseurl' 		=> base_url(),
 			'loginstatus'	=> $this->loginstatus,

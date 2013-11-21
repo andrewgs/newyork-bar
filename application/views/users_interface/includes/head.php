@@ -6,6 +6,7 @@
 	<!-- /ht Andy Clarke - http://front.ie/lkCwyf -->
 	<meta http-equiv="cleartype" content="on">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="google-site-verification" content="_AZr0SF3uEysb2YphYZS8BAqq5DCMgx2_ph5qNJP2GA" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="<?=$baseurl;?>favicon.ico">
 	<link rel="apple-touch-icon" href="<?=$baseurl;?>apple-touch-icon.png">

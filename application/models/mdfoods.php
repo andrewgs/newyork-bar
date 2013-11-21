@@ -2,29 +2,32 @@
 
 class Mdfoods extends CI_Model{
 
-	var $id   			= 0;
-	var $title 			= '';
-	var $weight  		= '';
+	var $id				= 0;
+	var $title			= '';
+	var $eng_title		= '';
+	var $weight			= '';
 	var $composition 	= '';
-	var $price  		= 0;
-	var $date 			= '';
-	var $category 		= 0;
-	var $subcategory 	= 0;
+	var $price			= 0;
+	var $date			= '';
+	var $category		= 0;
+	var $subcategory	= '';
+	var $subcategory1	= '';
 	
 	function __construct(){
 		parent::__construct();
 	}
 	
 	function insert_record($data,$category){
-			
+		
 		$this->title 		= htmlspecialchars($data['title']);
+		$this->eng_title 	= htmlspecialchars($data['eng_title']);
 		$this->weight		= htmlspecialchars($data['weight']);
 		$this->composition	= $data['composition'];
 		$this->price		= $data['price'];
 		$this->date			= date("Y-m-d");
 		$this->category		= $category;
 		$this->subcategory	= $data['subcategory'];
-		
+		$this->subcategory1	= $data['subcategory1'];
 		$this->db->insert('foods',$this);
 		return $this->db->insert_id();
 	}
@@ -32,10 +35,12 @@ class Mdfoods extends CI_Model{
 	function update_record($data){
 			
 		$this->db->set('title',htmlspecialchars($data['title']));
+		$this->db->set('eng_title',htmlspecialchars($data['eng_title']));
 		$this->db->set('weight',htmlspecialchars($data['weight']));
 		$this->db->set('composition',$data['composition']);
 		$this->db->set('price',$data['price']);
 		$this->db->set('subcategory',$data['subcategory']);
+		$this->db->set('subcategory1',$data['subcategory1']);
 		$this->db->where('id',$data['idf']);
 		$this->db->update('foods');
 		return $this->db->affected_rows();
@@ -50,10 +55,10 @@ class Mdfoods extends CI_Model{
 		return NULL;
 	}
 	
-	function read_records($cid){
+	function read_records($cid,$orderby = 'title ASC'){
 		
 		$this->db->where('category',$cid);
-		$this->db->order_by('title','ASC');
+		$this->db->order_by($orderby);
 		$query = $this->db->get('foods');
 		$data = $query->result_array();
 		if(count($data)) return $data;
@@ -90,5 +95,6 @@ class Mdfoods extends CI_Model{
 		$this->db->where('category',$category);
 		$this->db->delete('foods');
 		return $this->db->affected_rows();
-	}	
+	}
+
 }

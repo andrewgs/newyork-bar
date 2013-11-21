@@ -43,13 +43,14 @@ aside.wide { width: 26em; }
 	#container > header h1, #container > header #logo { margin-left: 0; }
 	#container > header address { margin-left: 0; }
 	nav ul { text-align: left; }
+	.social-menu { display: none; }
 }
 
 @media screen and (min-width: 63.236em) {
 	#container { padding: 1.618em 1em 1.618em 2.5em; -webkit-box-shadow: 7px 0 15px #555; -moz-box-shadow: 7px 0 15px #555; box-shadow: 7px 0 15px #555; -webkit-border-radius: 0 3px 10px 0; -moz-border-radius: 0 3px 10px 0; border-radius: 0 3px 10px 0; }
 	#container > header .hours { display: inline-block; }
 	#container > header h1, #container > header #logo { margin-right: 8.4em; }
-	nav ul li a { margin: 0 1.4em 0 0; }
+	nav ul li a { margin: 0 1.2em 0 0; }
 	nav ul li { display: inline; }
 	#photo-thumbs { display: block; }
 	body { background: url('../images/whitey.png'); padding: 0; }
@@ -59,7 +60,7 @@ aside.wide { width: 26em; }
 	#photo-slider { width: 31em; }
 	aside .promo-block { display: block; }
 	aside .menu-categories { margin-top: 3.5em; }
-	.menu-list { min-width: 36em; }
+	.menu-list { min-width: 36em; max-width: 36em; }
 	.afisha-columns .column.text { width: 56em; }
 	.afisha-columns .column { width: 32em; }
 	.ya-map, #ymaps-map-id_133876530959542054863 { width: 56em; height: 20em; }
@@ -75,4 +76,13 @@ aside.wide { width: 26em; }
 	#container > header h1, #container > header #logo { margin-left: 0; }
 	#container > header address { margin-left: 0; }
 	nav ul { text-align: left; }
+	.social-menu { display: block; }
+}
+
+.english-title {
+  clear: both;
+  position: static;
+  width: 100%;
+  color: #999;
+  font-size: 0.8em;
 }

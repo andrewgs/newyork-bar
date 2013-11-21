@@ -21,7 +21,7 @@
 				<tr>
 					<td style="min-width: 15px;"><?=$i+1;?>.</td>
 					<td style="min-width: 600px;"><?=anchor('',$foods[$i]['title'],array('class'=>'none'));?></td>
-					<td><a href="#editFood" class="editFood" data-ifood="<?=$foods[$i]['id'];?>" data-tfood="<?=$foods[$i]['title'];?>" data-tsubcategory="<?=$foods[$i]['subcategory'];?>" data-wfood="<?=$foods[$i]['weight'];?>" data-cpfood="<?=$foods[$i]['composition'];?>" data-pfood="<?=$foods[$i]['price'];?>" data-toggle="modal" title="Редактировать блюдо">Редактировать</a></td>
+					<td><a href="#editFood" class="editFood" data-ifood="<?=$foods[$i]['id'];?>" data-tfood="<?=$foods[$i]['title'];?>" data-etfood="<?=$foods[$i]['eng_title'];?>" data-tsubcategory="<?=$foods[$i]['subcategory'];?>"data-tsubcategory1="<?=$foods[$i]['subcategory1'];?>" data-wfood="<?=$foods[$i]['weight'];?>" data-cpfood="<?=$foods[$i]['composition'];?>" data-pfood="<?=$foods[$i]['price'];?>" data-toggle="modal" title="Редактировать блюдо">Редактировать</a></td>
 					<td><a href="#delFood" class="delFood" data-food="<?=$foods[$i]['id'];?>" data-toggle="modal" title="Удалить блюдо">Удалить</a></td>
 				</tr>
 			</table>
@@ -56,7 +56,9 @@
 				Food = $(this).attr('data-ifood');
 				$("#idFood").val(Food);
 				$("#etitle").val($(this).attr("data-tfood"));
+				$("#eeng_title").val($(this).attr("data-etfood"));
 				$("#esubcategory").val($(this).attr("data-tsubcategory"));
+				$("#esubcategory1").val($(this).attr("data-tsubcategory1"));
 				$("#eweight").val($(this).attr("data-wfood"));
 				$("#ecomposition").html($(this).attr("data-cpfood"));
 				$("#eprice").val($(this).attr("data-pfood"));

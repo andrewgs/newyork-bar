@@ -5,6 +5,7 @@ $route['404_override'] = '';
 /***************************************************	USERS INTRERFACE	***********************************************/
 
 $route[''] 			= "users_interface/index";
+$route['en'] 		= "users_interface/en";
 $route['about'] 	= "users_interface/about";
 $route['menu'] 		= "users_interface/menu";
 $route['menu/:any'] = "users_interface/menu";

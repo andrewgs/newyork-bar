@@ -15,9 +15,23 @@
 				</div>
 			</div>
 			<div class="control-group">
-				<label for="subcategory" class="control-label">Подкатегория: </label>
+				<label for="eng_title" class="control-label">На английском: </label>
+				<div class="controls">
+					<input type="text" id="eeng_title" class="input-xlarge" name="eng_title">
+					<span class="help-inline" style="display:none;">&nbsp;</span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label for="subcategory" class="control-label">Подкатегория1: </label>
 				<div class="controls">
 					<input type="text" id="esubcategory" class="input-xlarge einput" name="subcategory">
+					<span class="help-inline" style="display:none;">&nbsp;</span>
+				</div>
+			</div>
+			<div class="control-group">
+				<label for="subcategory1" class="control-label">Подкатегория2: </label>
+				<div class="controls">
+					<input type="text" id="esubcategory1" class="input-xlarge einput" name="subcategory1">
 					<span class="help-inline" style="display:none;">&nbsp;</span>
 				</div>
 			</div>
@@ -38,7 +52,7 @@
 			<div class="control-group">
 				<label for="composition" class="control-label">Состав: </label>
 				<div class="controls">
-					<textarea rows="5" id="ecomposition" class="input-xlarge" name="composition"></textarea>
+					<textarea rows="2" id="ecomposition" class="input-xlarge" name="composition"></textarea>
 					<span class="help-inline" style="display:none;">&nbsp;</span>
 				</div>
 			</div>

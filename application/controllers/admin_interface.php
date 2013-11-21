@@ -2,6 +2,9 @@
 
 class Admin_interface extends CI_Controller{
 	
+	//ALTER TABLE `foods` CHANGE `price` `price` VARCHAR( 50 ) NOT NULL ;
+	//ALTER TABLE `foods` ADD `subcategory1` VARCHAR( 50 ) NOT NULL AFTER `subcategory` ;
+	
 	var $user = array('uid'=>0,'cid'=>0,'ufullname'=>'','ulogin'=>'','uemail'=>'');
 	var $loginstatus = array('status'=>FALSE);
 	var $months = array("01"=>"января","02"=>"февраля","03"=>"марта","04"=>"апреля","05"=>"мая","06"=>"июня","07"=>"июля","08"=>"августа","09"=>"сентября","10"=>"октября","11"=>"ноября","12"=>"декабря");
@@ -14,25 +17,7 @@ class Admin_interface extends CI_Controller{
 		$this->load->model('mdfoods');
 		$this->load->model('mdtextblock');
 		
-		$cookieuid = $this->session->userdata('logon');
-		if(isset($cookieuid) and !empty($cookieuid)):
-			$this->user['uid'] = $this->session->userdata('userid');
-			if($this->user['uid']):
-				$userinfo = $this->mdusers->read_record($this->user['uid']);
-				if($userinfo):
-					$this->user['ulogin'] 			= $userinfo['login'];
-					$this->user['uemail'] 			= '';
-					$this->loginstatus['status'] 	= TRUE;
-				else:
-					redirect('');
-				endif;
-			endif;
-			
-			if($this->session->userdata('logon') != md5($userinfo['login'])):
-				$this->loginstatus['status'] = FALSE;
-				redirect('');
-			endif;
-		else:
+		if(!$this->loginstatus):
 			redirect('');
 		endif;
 	}

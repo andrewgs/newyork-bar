@@ -16,28 +16,23 @@
 			
 			<div id="carousel" class="cf" style="margin-bottom: 0;">
 				<div class="photo-wrapper clear">
+					<a class="promo-banner" href="<?=$baseurl;?>afisha">
+						<img src="<?=$baseurl;?>images/banner_thanksgiving_2013.jpg" alt="День благодарения" />
+					</a>
+					<a class="promo-banner" href="<?=$baseurl;?>afisha">
+						<img src="<?=$baseurl;?>images/banner_bogole_2013.jpg" alt="Французский вечер" />
+					</a>
+					<a class="promo-banner" href="#">
+						<img src="<?=$baseurl;?>images/banner_shtox.jpg" alt="Особые напитки в особые бокалы" />
+					</a>
+					<a class="promo-banner" href="<?=$baseurl;?>afisha">
+						<img src="<?=$baseurl;?>images/afisha/banner_oct_13.jpg" alt="Афиша на ноябрь" />
+					</a>
 					<!--
-					<a class="promo-banner" href="<?=$baseurl;?>afisha">
-						<img src="<?=$baseurl;?>images/avakova.jpg" alt="Выступление группы Music for the soul" />
-					</a>
-					<a class="promo-banner" href="<?=$baseurl;?>menu/kalyan">
-						<img src="<?=$baseurl;?>images/kalyan.jpg" alt="Обновленное кальянное меню" />
-					</a>
-					<iframe src="http://player.vimeo.com/video/43527522?title=0&amp;byline=0&amp;autoplay=0" width="896" height="500" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-					<div class="event-title">
-						<p>15 декабря @ 20:00</p>
-						<p>Выступление группы The Hobots</p>
-					</div>
-					<a class="promo-banner" href="<?=$baseurl;?>afisha">
-						<img src="<?=$baseurl;?>images/afisha/doza_radosti.jpg" alt="Выступление группы Доза радости" />
-					</a>
-					-->
-					
-					<a class="promo-banner" href="<?=$baseurl;?>menu">
-						<img src="<?=$baseurl;?>images/baner_besplatno.jpg" alt="Свой алкоголь при заказе банкета" style="width: 900px;">
+					<a class="promo-banner" href="<?=$baseurl;?>akcii">
+						<img src="<?=$baseurl;?>images/afisha/gift_certificate.jpg" alt="Подарочный сертификат" style="width: 900px;" />
 					</a>
 
-					<!--
 					<div id="photo-thumbs"></div>
 					<div id="photo-slider">
 						<img src="<?=$baseurl;?>images/slide_1.jpg" alt="вид" alt="image" />
@@ -69,13 +64,14 @@
 							ресторана - «Нью-Йорк» ко многому обязывает, и мы стараемся ему соответствовать.
 						</p>
 						<p>
-							Как город Нью-Йорк стал плавильным котлом, в котором перемешаны все народы Земли, так и наше заведение  
+							Как город Нью-Йорк стал плавильным котлом, в котором перемешаны все   
 						</p>
 					</div>
 					<div class="column">
 						<p>
+							народы Земли, так и наше заведение 
 							привержено стилю фьюжн и вобрало в себя культуру и традиции многих национальных
-							кухонь – армянской, грузинской, европейской, средиземноморской и, конечно же, русской. К 
+							кухонь – европейской, средиземноморской и, конечно же, русской. К 
 							широкому выбору блюд из меню этих кухонь, наш шеф-повар всегда предлагает что-то свое – 
 							особенное. Готов он выполнить и Ваши пожелания, будь то нечто изысканное или просто любимое Вами. 
 							Прекрасная винная карта, а так же коктейли на любой вкус дополняют красоту и богатство стола.
@@ -91,7 +87,7 @@
 					</div>
 				</section>
 				<aside>
-					<img src="<?=$baseurl;?>images/main_promo_1.jpg" alt="Услуги по организации банкетов" /> 
+					<img src="<?=$baseurl;?>images/main_promo_11.jpg" alt="Услуги по организации банкетов" /> 
 					<p class="image-caption">Ресторан-бар «Нью-Йорк» предлагает услуги по организации банкетов, фуршетов, свадеб, корпоративных вечеров и юбилеев.</p> 
 				</aside>
 			</article>

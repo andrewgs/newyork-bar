@@ -14,9 +14,6 @@
 			<?=$this->load->view("users_interface/includes/navigation");?>
 		<article class="menu cf">
 			<aside class="side-menu">
-				<p class="student-menu">
-					<a href="/docs/student_menu.pdf">Меню для выпускных</a>
-				</p>
 				<ul class="menu-categories cf">
 				<?php for($i=0;$i<count($fcategory);$i++):?>
 					<?php if($fcategory[$i]['uri'] == $this->uri->segment(2)):?>
@@ -55,17 +52,32 @@
 					<div class="title">наименование</div>
 					<div class="price">цена</div>
 				</div>
-			<?php for($i=0;$i<count($foods);$i++):?>
-				<div class="menu-item cf">
-					<div class="title"><?=$foods[$i]['title'];?></div>
-				<?php if(!empty($foods[$i]['composition'])):?>
-					<div class="receipt"><?=$foods[$i]['composition'];?><br/><span class="weight"><?=$foods[$i]['weight'];?>&mdash;</span></div>
-				<?php else:?>
-					<div class="receipt"><br/> <span class="weight"><?=$foods[$i]['weight'];?>&mdash;</span> <br/>&nbsp;</div>
-				<?php endif;?>
-					<div class="price"><?= ( $foods[$i]['price'] == 0 ) ? '&mdash;' : $foods[$i]['price'] . ' руб.'; ?></div>
+	<?php foreach($foods AS $category => $subcategories):?>
+				<?php if($category != 'пусто'):?>
+				<div style="color:#ff0000" class="">
+					<?=$category;?>
 				</div>
-			<?php endfor;?>
+				<?php endif;?>
+		<?php foreach($subcategories AS $subcategory => $food):?>
+				<?php if($subcategory != 'пусто'):?>
+				<div style="color:#140d9f" class="">
+					<?=$subcategory;?>
+				</div>
+				<?php endif;?>
+			<?php foreach($food AS $food_key => $food_value):?>
+				<div class="menu-item cf">
+					<div class="title"><?=$food_value['title'];?></div>
+				<?php if(!empty($food_value['composition'])):?>
+					<div class="receipt"><?=$food_value['composition'];?><br/><span class="weight"><?=$food_value['weight'];?>&mdash;</span></div>
+				<?php else:?>
+					<div class="receipt"><br/> <span class="weight"><?=$food_value['weight'];?>&mdash;</span> <br/>&nbsp;</div>
+				<?php endif;?>
+					<div class="price"><?=($food_value['price'] == 0)?'&mdash;':$food_value['price'].' руб.';?></div>
+					<div class="english-title"><?=$food_value['eng_title'];?></div>
+				</div>
+			<?php endforeach;?>
+		<?php endforeach;?>
+	<?php endforeach;?>
 			</section>
 		</article>
 	</div>

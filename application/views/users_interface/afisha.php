@@ -39,67 +39,290 @@
 							})();
 						</script>
 						<div class="pluso" data-options="horizontal=1,multiline=0,small=1,counter=1,round=0,theme=06" data-services="facebook,twitter,vkontakte,odnoklassniki,google,livejournal,moimir" data-background="transparent"></div>
-						<!--
-						<div class="cf">
-						    <div class="left">
-						    	<a href="https://twitter.com/share" class="twitter-share-button" data-count="none" data-lang="ru" data-url="http://newyork-bar.ru/afisha" data-text="Вечеринка в стиле Halloween Party в ресторан-баре Нью-Йорк">Твитнуть</a>
-						    </div>
-							<script>
-								! function(d, s, id) {
-									var js, fjs = d.getElementsByTagName(s)[0];
-									if (!d.getElementById(id)) {
-										js = d.createElement(s);
-										js.id = id;
-										js.src = "https://platform.twitter.com/widgets.js";
-										fjs.parentNode.insertBefore(js, fjs);
-									}
-								}(document, "script", "twitter-wjs");
-							</script>
-						
-							<div id="fb-root"></div>
-							<script>(function(d, s, id) {
-							  var js, fjs = d.getElementsByTagName(s)[0];
-							  if (d.getElementById(id)) return;
-							  js = d.createElement(s); js.id = id;
-							  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=118650518205495";
-							  fjs.parentNode.insertBefore(js, fjs);
-							}(document, 'script', 'facebook-jssdk'));</script>
-							<div class="left">
-								<div class="fb-like" data-href="http://newyork-bar.ru/afisha" data-send="false" data-show-faces="false" data-action="recommend"></div>
-							</div>
-						
-							<script type="text/javascript" src="http://userapi.com/js/api/openapi.js?60"></script>
-							<script type="text/javascript">
-								VK.init({
-									apiId : 3122703,
-									onlyWidgets : true
-								});
-							</script>
-							<div class="left cf">
-								<div id="vk_like"></div>
-							</div>
-							<script type="text/javascript">
-								VK.Widgets.Like("vk_like", {type: "full"});
-							</script>						
-						</div> 
-						-->
 					</div>
 				</section>
 			</article>
-			<!--
 			<article class="cf">
 				<section class="afisha-events">
 					<ul>
 						<li>
 							<div class="ev-thumb">
-								<div class="date"><strong>3</strong> апреля</div>
-								<img src="http://newyork-bar.ru/images/afisha/as_brooklyn.jpg" alt="" />
+								<div class="date"><strong>1</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/oct_afisha_19.jpg" alt="" />
 							</div>
 							<div class="ev-desc">
-								<h2>«Brooklyn Gats»</h2>
+								<h2>Блюз от группы «Smoci Ganz»</h2>
 								<p>
-									Инструментальный дуэт двух молодых музыкантов, которые создают атмосферу уюта 
-									и спокойствия, чтобы вы могли в полной мере насладиться ужином в нашем ресторане.
+									Вдохновленные творчеством B.B.King, Freddie King, Luther Allison, Albert Collins, 
+									Johnny Winter, Eric Clapton, Stevie Ray Vaughan, музыканты исполнют современный 
+									гитарный блюз/рок. 
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>5</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_square_standup.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Стендап-шоу «Квадрат»</h2>
+								<p>
+									Живой доступный юмор и расслабляющая атмосфера. В этот вечер вы сможете 
+									весело провести время, отдохнуть и даже попробовать свои силы на сцене. 
+									Никаких табу, никакой цензуры.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>7</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_vo.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Дуэт «Во»</h2>
+								<p>
+									Рваные джинсы или строгий костюм, виски с колой или красное вино - не имеет 
+									никакого значения! В гостях музыкальная группа "Во!". Их живые концерты 
+									славятся своей сильной энергетикой, острым юмором и драйвом!
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 100 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>8</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_rocknroll.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Группа «Aero Voice»</h2>
+								<p>
+									Поражающие оригинальностью и новизной звучания кавер-версии, как на ставшие 
+									классикой рок-н-ролла хиты, так и на современные молодежные дэнс-треки 
+									подаются в соусе из профессиональной аранжировки.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>9</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/oct_afisha_25.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Хиты 80-90-х группа «Love is»</h2>
+								<p>
+									В этот вечер все гости будут отжигать на сцене бара Нью-Йорк! 
+									Вы услышите Rock-n-Roll, Disco, Ska Dance. Группа «Love is» 
+									это всегда весело, красочно и танцевально!
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>14</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/oct_afisha_16.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Дуэт «Нью-Йорк» (гитара, вокал)</h2>
+								<p>
+									Молодые музыканты создают в «Нью-Йорке» атмосферу уюта 
+									и спокойствия, чтобы вы могли в полной мере насладиться 
+									ужином в нашем ресторане.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 100 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>15</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_loveis.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Группа «Стиляги»</h2>
+								<p>
+									Осень украшает деревья и все вокруг, поэтому и нам нужно облачиться в розовые 
+									пиджаки, канареечные рубашки и покорить танцпол нашего бара вместе со стилягами!
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>16</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/oct_afisha_19.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Блюз от группы «Smoci Ganz»</h2>
+								<p>
+									Вдохновленные творчеством B.B.King, Freddie King, Luther Allison, Albert Collins, 
+									Johnny Winter, Eric Clapton, Stevie Ray Vaughan, музыканты исполнют современный 
+									гитарный блюз/рок. 
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>17</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_pianist_composer.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Ирина Авакова</h2>
+								<p>
+									Ирина Авакова, пианист и композитор, исполнит как известные инструментальные 
+									композиции, так и произведения собственного сочинения. 
+								</p>
+								<p>
+									Начало в 20:00 / Вход свободный
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>21</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/sep_afisha_4.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Джазовый вечер</h2>
+								<p>
+									Живой звук и приятная атмосфера ресторана позволят вам провести романтичный вечер с 
+									любимым человеком или насладиться чтением книги в приятном одиночестве.
+								</p>
+								<p>
+									Начало в 21:00 / Вход &ndash; 100 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>22</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/oct_afisha_17.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Популярные хиты с вокалисткой «Leta»</h2>
+								<p>
+									Leta — одна из самых популярных и экстравагантных исполнительниц на Юге России в стиле джаз и соул. 
+									Проведите этот романтический вечер в ресторан-баре Нью Йорк и окунитесь в атмосферу чувственности.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>23</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_beatles.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Группа «Father Mc Kenzie»</h2>
+								<p>
+									Beatles вечеринка. Музыканты группы «Father Mc Kenzie» создут в ресторане уникальную 
+									музыкальную атмосферу, исполнив всеми любимые хиты ливерпульской четверки.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>24</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_pianist_composer.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Ирина Авакова</h2>
+								<p>
+									Ирина Авакова, пианист и композитор, исполнит как известные инструментальные 
+									композиции, так и произведения собственного сочинения. 
+								</p>
+								<p>
+									Начало в 20:00 / Вход свободный
+								</p>
+							</div>
+						</li>						
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>28</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_jazz.png" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Джазовый вечер</h2>
+								<p>
+									Живой звук и приятная атмосфера ресторана позволят вам провести романтичный вечер с 
+									любимым человеком или насладиться чтением книги в приятном одиночестве.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 100 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>29</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_trevell_band.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Группа «Trevell Band»</h2>
+								<p>
+									Под такую музыку нужно: взять вина, свечей, сигаретку (по желанию) и наслаждаться жизнью.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 100 руб.
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>30</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/as_rocknroll.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Группа «Aero Voice»</h2>
+								<p>
+									Поражающие оригинальностью и новизной звучания кавер-версии, как на ставшие 
+									классикой рок-н-ролла хиты, так и на современные молодежные дэнс-треки 
+									подаются в соусе из профессиональной аранжировки.
+								</p>
+								<p>
+									Начало в 20:30 / Вход &ndash; 200 руб.
+								</p>
+							</div>
+						</li>
+						<!--
+						<li>
+							<div class="ev-thumb">
+								<div class="date"><strong>30</strong> нояб.</div>
+								<img src="http://newyork-bar.ru/images/afisha/oct_afisha_26.jpg" alt="" />
+							</div>
+							<div class="ev-desc">
+								<h2>Кавер-группа «Мохито»</h2>
+								<p>
+									Если твое сердце открыто для перемен - ты не должен упускать возможность 
+									провести вечер с этой абсолютно "живой" командой. Предлагаем вам окунуться 
+									в атмосферу живого звука.
+								</p>
+								<p>
+									Начало в 21:00 / Вход &ndash; 200 руб.
 								</p>
 							</div>
 						</li>
@@ -325,10 +548,10 @@
 								</p>
 							</div>
 						</li>
+						-->
 					</ul>
 				</section>
 			</article>
-			-->
 			<!--
 			<article class="cf first">
 				<header>
@@ -782,7 +1005,6 @@
 					</div>
 				</section>
 			</article>
-			-->
 			<article class="cf">
 				<header>
 					<h2>Вечера американского джаза</h2>
@@ -861,6 +1083,7 @@
 					</div>
 				</section>
 			</article>
+			-->
 		</div>
 		<?=$this->load->view("users_interface/includes/footer");?>
 	</div>

@@ -132,7 +132,8 @@ nav ul li a:hover { text-decoration: underline; }
 nav ul li a:visited { color: #000; }
 nav ul li.social-menu { float: right; }
 
-a.social { display: inline-block; margin-right: 0.25em; }
+a.social { display: inline-block; margin-right: 0.1em; opacity: 0.5; transition: opacity 0.5s; }
+a.social:hover { opacity: 1; }
 
 
 footer { max-width: 62.25em; }
@@ -192,11 +193,11 @@ article.first { border-top: 1px solid #555; }
 
 .afisha-events ul { margin: 0; padding: 0; max-width: 60em; list-style: none; }
 .afisha-events ul li { float: left; margin: 0 1em 1.5em 0; border: 1px solid #CCC; max-width: 17.7em; background: #fafafa; box-shadow: 0 0 20px #CCC; }
-.afisha-events li .ev-thumb { position: relative; }
+.afisha-events li .ev-thumb { position: relative; height: 283px; overflow: hidden; }
 .afisha-events li .ev-thumb .date { position: absolute; background: #fff; color: #4e4e4e; width: 70px; height: 70px; text-align: center; font-size: 16px; top: 15px; left: 15px; font-style: italic; }
 .afisha-events li .ev-thumb .date strong { display: block; font-size: 24px; margin: 10px 0 0; font-style: normal; margin: 0.4em 0 0; }
 .afisha-events li .ev-desc { padding: 15px; height: 250px; overflow: hidden; }
-.afisha-events li .ev-desc h2 { color: #333; font: 25px Georgia, serif; margin: 0 0 0.5em; }
+.afisha-events li .ev-desc h2 { color: #333; font: 23px Georgia, serif; margin: 0 0 0.5em; }
 .afisha-events li .ev-desc p { font-style: normal; font-size: 0.8em; }
 .recommend { position: relative; float: left; color: #999; font-style: italic; font-size: 0.9em; top: 2px; margin-right: 1em; }
 
@@ -239,6 +240,13 @@ p.subnav-links a { font-size: 0.85em; margin-right: 1em; display: inline-block; 
 
 .student-menu a { color: #c91c20; text-decoration: none; font-weight: bold; border-bottom: 1px solid; }
 .student-menu a:hover { border-bottom: 1px solid transparent; }
+
+.social-menu { display: none; }
+h1 small { color: #c91c20; position: relative; top: -5px; left: 3px; font-size: 0.6em; } 
+header { position: relative; }
+.rus, .eng { position: absolute; top: -35px; right: 2px; display: block; opacity: 0.25; transition: opacity 0.5s; }
+.rus:hover, .eng:hover { opacity: 0.75; }
+.rus { right: 26px; }
 
 /* 7. BROWSER AND NON-SEMANTIC STYLING
 ----------------------------------------------------------------------------------------*/

@@ -11,6 +11,12 @@
 	<a id="logo" href="<?=$baseurl;?>">
 		<img src="<?=$baseurl;?>images/logo.png" alt="Ресторан-бар «Нью-Йорк»"/>
 	</a>
+	<a href="<?=$baseurl;?>en" class="eng">
+		<img src="<?=$baseurl;?>images/eng.png" alt="Английская версия" title="Английская версия"/>
+	</a>
+	<a href="<?=$baseurl;?>" class="rus">
+		<img src="<?=$baseurl;?>images/rus.png" alt="Русская версия" title="Русская версия"/>
+	</a>
 	<address>
 		+7 (863) 300-07-31<br />
 		<?=safe_mailto('info@newyork-bar.ru','info@newyork-bar.ru');?><br />
